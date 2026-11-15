@@ -1,0 +1,211 @@
+@import 'tailwindcss';
+
+:root {
+  --mq-parchment: #f0d48a;
+  --mq-parchment-deep: #e2c06a;
+  --mq-ink: #4a2c0f;
+  --mq-gold: #c9a227;
+  --mq-gold-dark: #8b5a12;
+  --mq-sea: #2f8f90;
+  --mq-sea-deep: #1f6c6e;
+  --mq-stone: #d9c2a0;
+  --mq-roof: #c45c3e;
+  --mq-people: #c45c3e;
+  --mq-democrats: #2f6f8f;
+  --mq-path: #7a4e1d;
+  --mq-cream: #f7e7b8;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(ellipse at 50% 0%, #3aa3a4, var(--mq-sea-deep) 55%, #16494a);
+  color: var(--mq-ink);
+  font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.mq-frame {
+  position: relative;
+  padding: 11px;
+  border-radius: 18px;
+  background:
+    linear-gradient(155deg, #f8e7b0 0%, #e4c15a 22%, #c4962a 55%, #8d5c16 100%);
+  box-shadow:
+    0 16px 40px rgba(20, 30, 30, 0.4),
+    inset 0 0 0 2px #4e3010,
+    inset 0 0 0 4px #f3dd96,
+    inset 0 0 0 6px #6d4210;
+}
+
+.mq-paper {
+  position: relative;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 255, 255, 0.28), transparent 42%),
+    radial-gradient(ellipse at 80% 90%, rgba(139, 90, 18, 0.12), transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(139, 90, 18, 0.035) 4px
+    ),
+    var(--mq-parchment);
+  border-radius: 9px;
+  box-shadow: inset 0 0 0 1px rgba(109, 66, 16, 0.28);
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.mq-stud {
+  position: absolute;
+  z-index: 2;
+  width: 7px;
+  height: 7px;
+  background: var(--mq-cream);
+  border: 1.5px solid #4e3010;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.mq-stud.tl { top: 2px; left: 2px; }
+.mq-stud.tr { top: 2px; right: 2px; }
+.mq-stud.bl { bottom: 2px; left: 2px; }
+.mq-stud.br { bottom: 2px; right: 2px; }
+
+.mq-btn {
+  background: linear-gradient(#e8c547, #c9a227);
+  color: var(--mq-ink);
+  border: 2px solid var(--mq-gold-dark);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 0 #6d4210;
+  cursor: pointer;
+  transition: transform 140ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 140ms ease, filter 140ms ease;
+}
+
+.mq-btn:hover {
+  filter: brightness(1.05);
+}
+
+.mq-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #6d4210;
+}
+
+.mq-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mq-btn-ink {
+  background: var(--mq-ink);
+  color: var(--mq-cream);
+  border-color: #2a1808;
+}
+
+.mq-btn-people {
+  background: var(--mq-people);
+  color: #fff8e8;
+  border-color: #7a2e1c;
+}
+
+.mq-btn-dem {
+  background: var(--mq-democrats);
+  color: #eef8fb;
+  border-color: #1a4458;
+}
+
+.mq-field {
+  width: 100%;
+  border: 2px solid var(--mq-gold-dark);
+  background: #fff8e4;
+  border-radius: 10px;
+  padding: 0.45rem 0.7rem;
+  color: var(--mq-ink);
+}
+
+.mq-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.mq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 2px solid var(--mq-gold-dark);
+  background: var(--mq-cream);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: inherit;
+}
+
+button.mq-chip {
+  cursor: pointer;
+}
+
+.pin-pulse {
+  animation: pin-pulse 1.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes pin-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.25);
+  }
+}
+
+.walker {
+  position: absolute;
+  offset-rotate: 0deg;
+  animation: walk var(--dur, 14s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes walk {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.snow {
+  background:
+    repeating-linear-gradient(0deg, #111 0 2px, #333 2px 4px),
+    repeating-linear-gradient(90deg, transparent 0 3px, rgba(255, 255, 255, 0.15) 3px 4px);
+  animation: snow 0.18s steps(2) infinite;
+}
+
+@keyframes snow {
+  to {
+    background-position:
+      0 4px,
+      3px 0;
+  }
+}

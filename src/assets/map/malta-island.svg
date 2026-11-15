@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-label="Malta silhouette">
+  <rect width="1000" height="700" fill="#2f8f90"/>
+  <g id="gozo" pointer-events="none">
+    <path d="M150 78 C175 42 250 38 312 68 C348 90 352 132 318 158 C270 188 188 172 158 128 C142 102 138 92 150 78 Z" fill="#d9c2a0" stroke="#8b5a12" stroke-width="6" stroke-linejoin="round"/>
+    <text x="230" y="118" text-anchor="middle" fill="#8b5a12" font-size="15">Gozo</text>
+  </g>
+  <ellipse cx="348" cy="188" rx="16" ry="9" fill="#d9c2a0" stroke="#8b5a12" stroke-width="3" pointer-events="none"/>
+  <path id="malta-land" d="M418 168 C430 132 458 118 488 128 C512 136 518 158 508 176 C522 168 548 172 568 188 C598 208 618 198 648 214 C682 232 704 248 728 268 C752 288 778 292 808 318 C792 328 768 334 748 342 C762 352 784 368 792 392 C800 424 788 452 772 478 C760 502 768 518 752 538 C732 564 700 572 672 586 C640 600 612 592 588 574 C552 552 528 530 502 500 C478 472 462 438 450 398 C438 352 428 310 422 268 C416 228 408 198 418 168 Z" fill="#d9c2a0" stroke="#8b5a12" stroke-width="7" stroke-linejoin="round"/>
+  <g data-place="peoples" data-cx="505" data-cy="178"><circle cx="505" cy="178" r="42" fill="transparent"/></g>
+  <g data-place="square" data-cx="575" data-cy="328"><circle cx="575" cy="328" r="42" fill="transparent"/></g>
+  <g data-place="media" data-cx="742" data-cy="318"><circle cx="742" cy="318" r="42" fill="transparent"/></g>
+  <g data-place="civic" data-cx="688" data-cy="372"><circle cx="688" cy="372" r="42" fill="transparent"/></g>
+  <g data-place="democrats" data-cx="648" data-cy="545"><circle cx="648" cy="545" r="42" fill="transparent"/></g>
+</svg>
