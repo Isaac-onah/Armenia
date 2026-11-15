@@ -174,12 +174,12 @@ interface Beat {
           <button
             class="figure-btn"
             type="button"
-            aria-label="Ismael"
+            aria-label="Ismaael"
             [attr.aria-hidden]="path.cardClosed() ? null : true"
             [attr.tabindex]="path.cardClosed() ? null : -1"
             (click)="open()"
           >
-            <img class="figure rest" src="assets/guide/ismael-rest.png" alt="" />
+            <img class="figure rest" src="assets/guide/ismaael-rest.png" alt="" />
           </button>
           @for (beat of beats(); track beat.id) {
             <img class="figure pose" [src]="src(beat.pose)" alt="" />
@@ -188,7 +188,7 @@ interface Beat {
         @for (beat of beats(); track beat.id) {
           <div class="card-slot" [attr.inert]="path.cardClosed() ? '' : null">
             <div class="card">
-              <p class="who">Ismael</p>
+              <p class="who">Ismaael</p>
               <p>{{ beat.text }}</p>
               <button class="mq-btn mt-2 !py-1 text-sm" type="button" (click)="go(beat)">{{ beat.label }}</button>
             </div>
@@ -222,7 +222,7 @@ export class Guide {
   }
 
   src(pose: Pose): string {
-    return `assets/guide/ismael-${pose}.png`;
+    return `assets/guide/ismaael-${pose}.png`;
   }
 
   private beat(): Beat | null {
@@ -253,7 +253,7 @@ export class Guide {
 
   private mapIntro(stage: Stage): Beat | null {
     if (stage === 'square') {
-      return line('square-map', 'welcome', 'square', 'see', "Let's start", "I'm Ismael. You are the player, and there is one path. Start on the playground. Hear someone before you choose a side.");
+      return line('square-map', 'welcome', 'square', 'see', "Let's start", "I'm Ismaael. You are the player, and there is one path. Start on the playground. Hear someone before you choose a side.");
     }
     if (stage === 'parties') {
       return line('parties-map', 'point', 'parties', 'see', 'Show me', "Both party houses are open. Visit People's and the Democrats, and read what they pledge.");

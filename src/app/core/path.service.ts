@@ -39,7 +39,7 @@ const EMPTY: PathState = {
 export class PathService {
   private readonly state = signal<PathState>(load());
   private readonly game = inject(RoomService);
-  /** The speech card is closed, and Ismael stays with his arms folded. */
+  /** The speech card is closed, and Ismaael stays with his arms folded. */
   readonly cardClosed = signal(false);
 
   readonly stage = computed<Stage>(() => {
